@@ -6,7 +6,7 @@ function sumar()
 {
 	var primerNumIngresado;
 	var segundoNumIngresado;
-	var sumar;
+	var suma;
 
 	primerNumIngresado = document.getElementById("txtIdNumeroUno").value;
 	segundoNumIngresado = document.getElementById("txtIdNumeroDos").value;
@@ -14,9 +14,9 @@ function sumar()
 	primerNumIngresado = parseInt(primerNumIngresado);
 	segundoNumIngresado = parseInt(segundoNumIngresado);
 
-	sumar = primerNumIngresado + segundoNumIngresado;
+	suma = primerNumIngresado + segundoNumIngresado;
 
-	alert("la suma es " + sumar);
+	alert("la suma es " + suma);
 
 
 }
