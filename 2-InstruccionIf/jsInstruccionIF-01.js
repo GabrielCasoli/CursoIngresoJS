@@ -12,10 +12,4 @@ function mostrar()
 
 	}
 
-	else()
-	{
-
-	}
-
-
 }//FIN DE LA FUNCIÓN

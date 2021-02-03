@@ -18,6 +18,5 @@ function sumar()
 
 	alert("la suma es " + suma);
 
-
 }
 
