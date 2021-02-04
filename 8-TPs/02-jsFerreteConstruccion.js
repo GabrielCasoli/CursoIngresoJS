@@ -8,7 +8,10 @@ function Rectangulo ()
 {
 	var largoDelTerreno;
 	var anchoDelTerreno;
+	var perimetro;
 	var cantidadDeAlambre;
+
+	const CANTIDAD_ALAMBRE = 3;
 
 	largoDelTerreno = document.getElementById('txtIdLargo').value;
 	anchoDelTerreno = document.getElementById('txtIdAncho').value;
@@ -16,7 +19,9 @@ function Rectangulo ()
 	largoDelTerreno = parseInt(largoDelTerreno);
 	anchoDelTerreno = parseInt(anchoDelTerreno);
 
-	cantidadDeAlambre = 2*(largoDelTerreno + anchoDelTerreno)*3;
+	perimetro = 2*(largoDelTerreno + anchoDelTerreno);
+
+	cantidadDeAlambre = perimetro * CANTIDAD_ALAMBRE;
 
 	alert("La cantidad de alambre que se necesita comprar es " + cantidadDeAlambre + "m.");
 
