@@ -22,7 +22,7 @@ function Sumar ()
 
 	resultado = primerPrecio + segundoPrecio + tercerPrecio;
 
-	alert("La suma de los valores ingresados es "+resultado);
+	alert("La suma de los precios es $"+resultado);
 
 
 }
@@ -43,8 +43,7 @@ function Promedio ()
 
 	resultado = (primerPrecio + segundoPrecio + tercerPrecio)/3;
 
-	alert("El promedio de los valores ingresados es "+resultado);
-
+	alert("El promedio de los precios es $"+resultado.toFixed(2));
 
 }
 function PrecioFinal () 
@@ -53,10 +52,9 @@ function PrecioFinal ()
 	var segundoPrecio;
 	var tercerPrecio;
 	var preciosSinIva;
-	var iva;
 	var resultado;
 
-	iva = 21;
+	const IVA = 21;
 
 	primerPrecio = document.getElementById('txtIdPrecioUno').value;
 	segundoPrecio = document.getElementById('txtIdPrecioDos').value;
@@ -68,8 +66,8 @@ function PrecioFinal ()
 
 	preciosSinIva = primerPrecio + segundoPrecio + tercerPrecio;
 
-	resultado = (preciosSinIva *iva /100) + preciosSinIva;
+	resultado = (preciosSinIva * IVA /100) + preciosSinIva;
 
-	alert("El precio final mas Iva es " + resultado);
+	alert("El precio final mas Iva es $" + resultado);
 
 }

@@ -27,15 +27,13 @@ function Circulo ()
 	var perimetro;
 	var alambre;
 
-	var PI;
-
-	PI = 3.14
+	const PI = 3.14;
 
 	radio = document.getElementById('txtIdRadio').value;
 
 	radio = parseInt(radio);
 
-	perimetro = 2*PI*radio;
+	perimetro = 2 * PI * radio;
 
 	alambre = perimetro * 3;
 
