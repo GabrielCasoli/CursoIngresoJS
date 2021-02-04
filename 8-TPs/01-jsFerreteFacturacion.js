@@ -22,7 +22,7 @@ function Sumar ()
 
 	resultado = primerPrecio + segundoPrecio + tercerPrecio;
 
-	alert("La suma de los valores ingresados es: "+resultado);
+	alert("La suma de los valores ingresados es "+resultado);
 
 
 }
@@ -43,7 +43,7 @@ function Promedio ()
 
 	resultado = (primerPrecio + segundoPrecio + tercerPrecio)/3;
 
-	alert("El promedio de los valores ingresados es: "+resultado);
+	alert("El promedio de los valores ingresados es "+resultado);
 
 
 }
@@ -68,8 +68,8 @@ function PrecioFinal ()
 
 	preciosSinIva = primerPrecio + segundoPrecio + tercerPrecio;
 
-	resultado = preciosSinIva *iva /100 + preciosSinIva;
+	resultado = (preciosSinIva *iva /100) + preciosSinIva;
 
-	alert("El precio final mas Iva es: " + resultado);
-	
+	alert("El precio final mas Iva es " + resultado);
+
 }
