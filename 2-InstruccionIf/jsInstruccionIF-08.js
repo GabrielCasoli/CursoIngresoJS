@@ -5,9 +5,26 @@ pero si no es asi, y es soltero y no es menor, mostrar el siguiente mensaje: 'Es
 */
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	var edad;
+	var estadoCivil;
+
+	edad = parseInt(document.getElementById('txtIdEdad').value);
+
+	estadoCivil = document.getElementById('estadoCivil').value;
+
+	if (estadoCivil == "Soltero" && edad >= 18)
+	{
+
+		alert("Es soltero y no es menor.");
+
+	}
 	
+	else if (estadoCivil == "Soltero" && edad < 18)
+	{
+
+		alert("Es soltero y es menor.");
+
+	}
 
 
 }//FIN DE LA FUNCIÓN
