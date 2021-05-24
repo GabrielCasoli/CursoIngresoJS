@@ -11,7 +11,7 @@ en Otoño y Primavera: bariloche tiene un aumento del 10% cataratas tiene un aum
 
 function mostrar()
 {
-	var estacionIngresada;
+	/*var estacionIngresada;
 	var destinoIngresado;
 	var aumento;
 	var descuento;
@@ -77,7 +77,7 @@ function mostrar()
 				aumento = 10;
 			}
 		}
-			
+		break;	
 	}
 
 	if (aumento != 0)
@@ -92,9 +92,98 @@ function mostrar()
 		}
 	}
 
-	alert("Precio final es: "+precioFinal);
+	alert("Precio final es: " + precioFinal);
 
 	console.log(estacionIngresada);
-	console.log(destinoIngresado);
+	console.log(destinoIngresado);*/
+
+	var estacionDelAño;
+	var localidad;
+	var precioBase;
+	var descuento;
+	var aumento;
+	var precioFinal;
+
+	precioBase = 15000;
+
+	aumento = 0;
+
+	descuento = 0;
+
+	estacionDelAño = document.getElementById('txtIdEstacion').value;
+
+	localidad = document.getElementById('txtIdDestino').value;
+
+
+	switch(estacionDelAño)
+	{
+		case "Invierno":
+		{
+			if(localidad == "Bariloche")
+			{
+				aumento = precioBase * 0.20;
+
+			}
+			else
+			{
+				if(localidad == "Mar del plata")
+				{
+					descuento = precioBase * 0.20; 
+				}
+				else
+				{
+					descuento = precioBase * 0.10;
+				}
+			}
+			break;
+		}
+
+		case "Verano":
+		{
+			if(localidad == "Bariloche")
+			{
+				descuento = precioBase * 0.20;
+
+			}
+			else
+			{
+				if(localidad == "Mar del plata")
+				{
+					aumento = precioBase * 0.20; 
+				}
+				else
+				{
+					aumento = precioBase * 0.10;
+				}
+			}
+			break;
+		}
+
+		case "Otoño":
+		case "Primavera":
+		{
+			if(localidad == "Cordoba")
+			{
+				descuento = precioBase * 0;
+
+			}
+			else
+			{
+				aumento = precioBase * 0.10;
+			}
+			break;
+		}
+	}
+
+	console.log("La estacion del año es: " + estacionDelAño);
+	console.log("La localidad es: " + localidad);
+	console.log("El aumento es:" + aumento);
+	console.log("El descuento es: " + descuento);
+
+	precioFinal = precioBase + (aumento - descuento);
+
+	alert("Precio final es: "+ precioFinal);
+		
+	console.log("El precio final es: " + precioFinal);
 
 }//FIN DE LA FUNCIÓN
